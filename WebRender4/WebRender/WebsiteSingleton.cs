@@ -9,15 +9,26 @@ using Microsoft.Extensions.Hosting;
 
 namespace WebRender4
 {
-    public class Website
+    public class WebsiteSingleton
     {
-        public Website(String[] args)
+
+        static WebsiteSingleton instance;
+        public WebsiteSingleton()
         {
         }
         public static void launch(String[] args)
         {
             Console.WriteLine("heeeeei" + args);
             CreateHostBuilder(args).Build().Run();
+        }
+
+        public static WebsiteSingleton getWebsiteInstance()
+        {
+            if (instance == null)
+            {
+                instance = new WebsiteSingleton();
+            }
+            return instance;
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
