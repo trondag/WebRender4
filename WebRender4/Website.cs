@@ -14,7 +14,7 @@ namespace WebRender4
         public Website(String[] args)
         {
         }
-        public static void hei(String[] args)
+        public static void launch(String[] args)
         {
             Console.WriteLine("heeeeei" + args);
             CreateHostBuilder(args).Build().Run();
