@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace WebRender4.WebRender
 {
-    interface IComponentBuilder
+    interface ICompositeComponentBuilder : IComponentBuilder
     {
-        Component createNewComponent();
-        Component GetComponent();
+        void addComponent(Component component);
     }
 }

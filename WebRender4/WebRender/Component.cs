@@ -5,7 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebRender4.WebRender
 {
-    public class Component
+    public class Component : IComponent
     {
+        public void addComponent(Component component)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

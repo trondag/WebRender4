@@ -5,8 +5,13 @@ using System.Threading.Tasks;
 
 namespace WebRender4.WebRender.Components
 {
-    public class HeaderBuilder : IComponentBuilder
+    public class DivBuilder : ICompositeComponentBuilder
     {
+        public void addComponent(Component component)
+        {
+            throw new NotImplementedException();
+        }
+        
         public Component createNewComponent()
         {
             throw new NotImplementedException();
@@ -17,14 +22,5 @@ namespace WebRender4.WebRender.Components
             throw new NotImplementedException();
         }
 
-        public void setText(String text)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setHeaderLevel(int level)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

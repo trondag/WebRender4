@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebRender4.WebRender.Components.DivBuilder" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAACAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\Components\DivBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WebRender4.WebRender.Components.HeaderBuilder" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAQAABACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\Components\HeaderBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WebRender4.WebRender.Components.ParagraphBuilder" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAABACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\Components\ParagraphBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.471" />
+  </Class>
+  <Class Name="WebRender4.WebsiteSingleton">
+    <Position X="15.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAoAAAAAAAAAACAAABAAAAAFAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\WebsiteSingleton.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WebRender4.WebRender.Component">
+    <Position X="14.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\Component.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WebRender4.WebRender.ICompositeComponentBuilder">
+    <Position X="7" Y="2.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\ICompositeComponentBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WebRender4.WebRender.IComponent">
+    <Position X="10.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WebRender4.WebRender.IComponentBuilder">
+    <Position X="7" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WebRender\IComponentBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -7,5 +7,6 @@ namespace WebRender4.WebRender
 {
     interface IComponent
     {
+        void addComponent(Component component);
     }
 }

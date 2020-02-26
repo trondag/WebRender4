@@ -4,21 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using WebRender4.WebRender;
 
-    //Microsoft.Extensions.Hosting.Abstractions
+//Microsoft.Extensions.Hosting.Abstractions
 
 namespace WebRender4
 {
-    public class WebsiteSingleton
+    public class WebsiteSingleton : ICompositeComponentBuilder
     {
 
         static WebsiteSingleton instance;
-        public WebsiteSingleton()
-        {
-        }
         public static void launch(String[] args)
         {
-            Console.WriteLine("heeeeei" + args);
+            // HtmlRender().render(getWebsiteInstance);
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -37,5 +35,21 @@ namespace WebRender4
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+        public void addComponent(Component component)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Component createNewComponent()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Component GetComponent()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
