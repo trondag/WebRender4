@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebRender.WebRender.HTMLelements;
 using WebRender4.WebRender.Components;
 
 namespace WebRender4.WebRender.HTML
@@ -11,7 +12,6 @@ namespace WebRender4.WebRender.HTML
     {
         private static readonly StringBuilder content = new StringBuilder();
         private static readonly StringBuilder beforeAndAfter = new StringBuilder();
-        private static Stack<string> endTags = new Stack<string>();
        
         private static StringBuilder writer(CompositeTag compositeComponent)
         {
@@ -29,21 +29,40 @@ namespace WebRender4.WebRender.HTML
             {
                 content.Append(" href='" + compositeComponent.href + "'");
             }
+            if (compositeComponent.css != null)
+            {
+                content.Append(" style='" + compositeComponent.css + "'");
+            }
+            if (compositeComponent.placeholder != null)
+            {
+                content.Append(" placeholder='" + compositeComponent.placeholder + "'");
+            }
+            if (compositeComponent is InputTag)
+            {
+                InputTag itag = (InputTag)compositeComponent;
+                content.Append(" type='" + itag.getInputType() + "'");
+            }
+
             content.Append(">\n");
 
-            if (compositeComponent.innerText != null)
+            if (compositeComponent.hasClosingTag)
             {
-                content.Append(compositeComponent.getInnerText());
+
+                if (compositeComponent.innerText != null)
+                {
+                    content.Append(compositeComponent.getInnerText());
+                }
+
+
+                // Går gjennom alle komponentene/taggene som eventuelt befinner seg inne i taggen.
+                // Kaller deretter metoden "writer()" på nytt dersom det er tilfelle.
+                foreach (CompositeTag component in compositeComponent.composites)
+                {
+                    writer(component);
+                }
+
+                content.Append("</" + compositeComponent.getContext() + ">");
             }
-
-            endTags.Push(compositeComponent.getContext());
-
-            foreach (CompositeTag component in compositeComponent.composites)
-            {
-                writer(component);
-            }
-
-            content.Append("</" + compositeComponent.getContext() + ">");
 
             return content;
         }

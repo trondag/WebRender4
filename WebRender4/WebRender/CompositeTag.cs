@@ -9,9 +9,12 @@ namespace WebRender4.WebRender
     {
         public string id { get; set; }
         public string className { get; set; }
+        public bool hasClosingTag = true;
         public string context;
         public string innerText;
         public string href;
+        public string css;
+        public string placeholder;
         public List<CompositeTag> composites { get; set; }
 
         public CompositeTag()
@@ -37,6 +40,11 @@ namespace WebRender4.WebRender
         public string getHref()
         {
             return this.href;
+        }
+
+        public void addCss(String css)
+        {
+            this.css = css;
         }
     }
 }

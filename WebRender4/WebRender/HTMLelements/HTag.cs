@@ -26,6 +26,13 @@ namespace WebRender4.WebRender.Components
             }
         }
 
+        public HTag(int headerLevel, string innerText)
+        {
+            this.headerLevel = headerLevel;
+            context = "h" + headerLevel;
+            this.innerText = innerText;
+        }
+
         public void interpret(string context)
         {
             throw new NotImplementedException();

@@ -13,7 +13,7 @@ namespace WebRender4.WebRender.Components
         public Article(string text)
         {
             article = new ArticleTag();
-            article.composites.Add(new PTag(text));
+            article.addComponent(new PTag(text));
             composites.Add(article);
         }
     }
