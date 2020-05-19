@@ -73,7 +73,7 @@ namespace WebRender4.WebRender.HTML
             beforeAndAfter.Append(writer(composite));
             beforeAndAfter.Append("<div class='container'>\n<main role = 'main' class='pb-3'>@{ IgnoreBody(); }</main>\n</div>\n</html>");
             string sb = beforeAndAfter.ToString();
-            System.IO.File.WriteAllText(@"C:\Users\Trond Arne Graabræk\source\repos\trondag\WebRender4\WebRender4\Views\Shared\_Layout.cshtml", sb);
+            System.IO.File.WriteAllText(@"Views\Shared\_Layout.cshtml", sb);
         }
     }
 }

@@ -33,6 +33,8 @@ namespace WebRender4
             DivTag barn2 = new DivTag("col-6", new PTag(File.ReadAllText("dummy-text.txt")));
             mor.addComponent(barn2);
             website.addComponent(mor);
+            website.addComponent(new NavBar(new ATag("Hjem", "index.html"), new ATag("Om oss", "om_oss.html")));
+
 
 
             website.addComponent(new SimpleFooter(new PTag("mob: 12345678"), new PTag("adr: Siste Reis 45a")));
